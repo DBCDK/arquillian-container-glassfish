@@ -31,12 +31,11 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.glassfish.jersey.media.multipart.FormDataMultiPart;
 import org.jboss.arquillian.container.glassfish.CommonGlassFishConfiguration;
 import org.jboss.arquillian.container.spi.client.protocol.metadata.HTTPContext;
 import org.jboss.arquillian.container.spi.client.protocol.metadata.Servlet;
 
-import com.sun.jersey.api.client.ClientHandlerException;
-import com.sun.jersey.multipart.FormDataMultiPart;
 
 
 public class GlassFishClientService implements GlassFishClient {
@@ -100,7 +99,7 @@ public class GlassFishClientService implements GlassFishClient {
 		
 		try {
 			standaloneServers = getServersList();		
-		} catch (ClientHandlerException ch) {        	
+		} catch (Exception ch) {
 	    	message = "Could not connect to DAS on: " + getDASUrl() + " | " 
 	    		+ ch.getCause().getMessage();
         	throw new GlassFishClientException(message);
@@ -298,7 +297,7 @@ public class GlassFishClientService implements GlassFishClient {
 	public boolean isDASRunning() {
         try {
             getClientUtil().GETRequest("");
-        } catch (ClientHandlerException clientEx) {
+        } catch (Exception clientEx) {
             if (clientEx.getCause().getClass().equals(ConnectException.class)) {
                 // We were unable to connect to the DAS through Jersey
                 return false;

@@ -31,8 +31,9 @@ import org.jboss.arquillian.container.spi.client.protocol.metadata.ProtocolMetaD
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.exporter.ZipExporter;
 
-import com.sun.jersey.multipart.FormDataMultiPart;
-import com.sun.jersey.multipart.file.StreamDataBodyPart;
+import org.glassfish.jersey.media.multipart.FormDataMultiPart;
+import org.glassfish.jersey.media.multipart.file.StreamDataBodyPart;
+
 
 /**
  * 

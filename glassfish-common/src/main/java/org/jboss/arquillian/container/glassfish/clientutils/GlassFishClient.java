@@ -22,9 +22,10 @@
 package org.jboss.arquillian.container.glassfish.clientutils;
 
 import java.util.Map;
+
+import org.glassfish.jersey.media.multipart.FormDataMultiPart;
 import org.jboss.arquillian.container.spi.client.container.DeploymentException;
 import org.jboss.arquillian.container.spi.client.protocol.metadata.HTTPContext;
-import com.sun.jersey.multipart.FormDataMultiPart;
 
 public interface GlassFishClient {
 	
@@ -54,7 +55,7 @@ public interface GlassFishClient {
 	 * 		  form		- a form of MediaType.MULTIPART_FORM_DATA_TYPE
 	 * @return subComponents - a map of SubComponents of the application
 	 */
-    public HTTPContext doDeploy(String name, FormDataMultiPart form) throws DeploymentException; 
+    public HTTPContext doDeploy(String name, FormDataMultiPart form) throws DeploymentException;
 	
     /**
 	 * Do undeploy the application 
