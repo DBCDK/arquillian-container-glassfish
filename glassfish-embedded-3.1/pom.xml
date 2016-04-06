@@ -3,9 +3,9 @@
 
     <!-- Parent -->
     <parent>
-        <groupId>org.jboss.arquillian.container</groupId>
+        <groupId>dk.dbc.arquillian.container</groupId>
         <artifactId>arquillian-parent-glassfish</artifactId>
-        <version>1.0.0.Final-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -14,7 +14,7 @@
 
     <!-- Artifact Configuration -->
     <artifactId>arquillian-glassfish-embedded-3.1</artifactId>
-    <name>Arquillian Container GlassFish Embedded 3.1</name>
+    <name>Arquillian Container GlassFish Embedded 3.1 (jersey 2)</name>
     <description>Glassfish Embedded 3.1 Container integration for the Arquillian Project</description>
 
     <!-- Dependencies -->
@@ -88,7 +88,7 @@
         <profile>
             <id>4.x</id>
             <properties>
-                <version.glassfish>4.0-b72</version.glassfish>
+                <version.glassfish>4.1</version.glassfish>
             </properties>
             <dependencies>
                 <dependency>

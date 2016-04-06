@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <parent>
-        <groupId>org.jboss.arquillian.container</groupId>
+        <groupId>dk.dbc.arquillian.container</groupId>
         <artifactId>arquillian-parent-glassfish</artifactId>
-        <version>1.0.0.Final-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -17,7 +17,7 @@
     <dependencies>
 
         <dependency>
-            <groupId>org.jboss.arquillian.container</groupId>
+            <groupId>dk.dbc.arquillian.container</groupId>
             <artifactId>arquillian-glassfish-common</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -110,17 +110,17 @@
     <profiles>
         <profile>
             <id>3.x</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <version.glassfish>3.1.2</version.glassfish>
             </properties>
         </profile>
         <profile>
             <id>4.x</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
-                <version.glassfish>4.0-b72</version.glassfish>
+                <version.glassfish>4.1</version.glassfish>
             </properties>
         </profile>
     </profiles>

@@ -2,12 +2,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>arquillian-parent-glassfish</artifactId>
-        <groupId>org.jboss.arquillian.container</groupId>
-        <version>1.0.0.Final-SNAPSHOT</version>
+        <groupId>dk.dbc.arquillian.container</groupId>
+        <version>1.0.0</version>
         <relativePath>..</relativePath>
     </parent>
     <artifactId>arquillian-glassfish-common</artifactId>
-    <name>Arquillian Container GlassFish Common Services</name>
+    <name>Arquillian Container GlassFish Common Services (jersey 2)</name>
 
     <dependencies>
         
